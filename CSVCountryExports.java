@@ -9,9 +9,8 @@ import edu.duke.*;
 import java.io.File;
 import org.apache.commons.csv.*;
 
-public class Week3 {
-    
-       
+public class CSVCountryExports {
+         
     public void countryInfo(CSVParser parser, String country) {
       String result = "NOT FOUND";
         for (CSVRecord record : parser) {
@@ -23,7 +22,7 @@ public class Week3 {
       }
         
     }
-    
+        
      public void listExportersTwoProducts (CSVParser parser, String exportItem1, String exportItem2 ) {
       String result = "NO COUNTRY FOUND";
         for (CSVRecord record : parser) {
@@ -61,26 +60,26 @@ public class Week3 {
         
     }
     
-    public void tester() {
+    public void testcountryInfo() {
         FileResource fr = new FileResource();
         CSVParser parser = fr.getCSVParser();
         countryInfo(parser, "Nauru");
                
     }
-    
-     public void tester2() {
+        
+     public void testlistExportersTwoProducts() {
         FileResource fr2 = new FileResource();
         CSVParser parser = fr2.getCSVParser();
-        listExportersTwoProducts(parser, "fish","nuts");
+        listExportersTwoProducts(parser, "flowers","cotton");
     }
     
-      public void tester3() {
+      public void testnumberOfExporters() {
         FileResource fr3 = new FileResource();
         CSVParser parser = fr3.getCSVParser();
-        numberOfExporters(parser, "gold");
+        numberOfExporters(parser, "cocoa");
     }
     
-      public void tester4() {
+      public void testbigExporters() {
         FileResource fr3 = new FileResource();
         CSVParser parser = fr3.getCSVParser();
         bigExporters(parser, "$999,999,999,999");
